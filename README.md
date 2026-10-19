@@ -11,7 +11,12 @@ Sorry but now this project doesn't have any features but in future MAYBE created
 ## Download
 to download this project now you need to clone github repository by this command:
 ```bash
-git clone "https://github.com/davidykmisha2015-prog/pandash"
+git clone https://github.com/davidykmisha2015-prog/pandash.git
 cd pandash
-cargo build
+cargo build --release
 cargo run
+```
+and binary created in ./target/releases/pandash
+## If you uses nixos
+in nixos this command works but if you want download it in your system you need to add pandash into your flake.nix and configuration.nix:
+
