@@ -10,7 +10,7 @@ Sorry but now this project doesn't have any features but in future MAYBE created
 
 ## Download
 to download this project now you need to clone github repository by this command:
-'''bash
+```bash
 git clone "https://github.com/davidykmisha2015-prog/pandash"
 cd pandash
 cargo build
