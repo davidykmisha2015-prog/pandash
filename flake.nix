@@ -12,6 +12,15 @@
         pkgs = nixpkgs.legacyPackages.${system};
       in
       {
+        packages.default = pkgs.rustPlatform.buildRustPackage {
+          pname = "panda";
+          version = "0.1.0";
+          src = ./.;
+          cargoLock = {
+            lockFile = ./Cargo.lock;
+          };
+        };
+
         devShells.default = pkgs.mkShell {
           buildInputs = with pkgs; [
             cargo
@@ -21,7 +30,6 @@
             pkg-config
           ];
 
-          # Забезпечуємо правильне середовище для компіляції низькорівневих пакетів
           shellHook = ''
             echo "Rust version: $(rustc --version)"
           '';
